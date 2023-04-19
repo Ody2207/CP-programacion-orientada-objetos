@@ -1,6 +1,11 @@
 <?php
-require_once('Car.php');
-require_once('Account.php');
+require_once('car.php');
+require_once('UberX.php');
+require_once('account.php');
 
-$car = new Car("HIF344", Account("Andres Herrera", "JFD342"));
-$car->printDataCar;
+$uberX = new UberX('CVE234', new Account('Andres Herrera', 'DAD234'), 'Chevrolet', 'Sparl');
+$uberX->printDataCar();
+
+$uberPool = new UberPool('JFK342', new Account('Andrea Fernanda', 'KJD342'), 'Dodge', 'Attitude');
+$uberPool->printDataCar();
+?>
